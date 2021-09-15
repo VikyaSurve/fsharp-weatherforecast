@@ -1,0 +1,41 @@
+accelerator:
+  displayName: F# Accelerator
+  description: An F# sample service
+  iconUrl: https://raw.githubusercontent.com/simple-starters/icons/master/icon-dotnet.png
+  tags:
+  - dotnet
+  - F#
+  options:
+  - name: applicationName
+    label: Application Name
+    description: Application Name
+    inputType: text
+    defaultValue: Sample
+    required: true
+  - name: enableDockerfile
+    label: Dockerfile
+    description: Include a Dockerfile
+    dataType: boolean
+    inputType: toggle
+    defaultValue: false
+    required: true
+engine:
+  merge:
+  - include: [ "**" ]
+    exclude: [ "Sample.fsproj", "Dockerfile" ]
+    chain:
+    - type: ReplaceText
+      substitutions:
+      - text: SampleDotNet
+        with: "#applicationName"
+  - include: [ "Sample.fsproj" ]
+    chain:
+    - type: RewritePath
+      rewriteTo: "#applicationName + '.fsproj'"
+  - condition: "#enableDockerfile"
+    include: [ "Dockerfile" ]
+    chain:
+    - type: ReplaceText
+      substitutions:
+      - text: Sample
+        with: "#applicationName"
