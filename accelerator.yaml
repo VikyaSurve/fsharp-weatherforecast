@@ -1,6 +1,6 @@
 accelerator:
-  displayName: F# Accelerator
-  description: An F# sample service
+  displayName: F# Weather Forecast
+  description: An F# sample accelerator
   iconUrl: https://seeklogo.com/images/F/fsharp-logo-C217FA0E41-seeklogo.com.png
   tags:
   - dotnet
