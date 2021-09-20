@@ -1,7 +1,7 @@
 accelerator:
   displayName: F# Accelerator
   description: An F# sample service
-  iconUrl: https://raw.githubusercontent.com/sample-accelerators/icons/master/icon-dotnet.png
+  iconUrl: https://seeklogo.com/images/F/fsharp-logo-C217FA0E41-seeklogo.com.png
   tags:
   - dotnet
   - F#
