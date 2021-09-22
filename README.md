@@ -2,7 +2,7 @@
 
 A sample accelerator for F#.
 
-This sample is the vanilla Weather Forecast RESTful API application made available from Microsoft.  It provides a single endpoint, `/weatherforecast`, that returns a mock forecast for the upcoming several days.
+This sample is the Weather Forecast RESTful API application made available from Microsoft.  It provides a single endpoint, `/weatherforecast`, that returns a mock forecast for the upcoming several days.
 
 The starting source for this sample was created using:
 ```
