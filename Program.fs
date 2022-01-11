@@ -14,10 +14,16 @@ open Microsoft.Extensions.Logging
 module Program =
     let exitCode = 0
 
+    let port = 
+        if Environment.GetEnvironmentVariable("PORT") > ""
+            then Environment.GetEnvironmentVariable("PORT")
+            else "5000"
+    let url = String.Concat("http://0.0.0.0:", port)
+
     let CreateHostBuilder args =
         Host.CreateDefaultBuilder(args)
             .ConfigureWebHostDefaults(fun webBuilder ->
-                webBuilder.UseStartup<Startup>() |> ignore
+                webBuilder.UseStartup<Startup>().UseUrls(url) |> ignore
             )
 
     [<EntryPoint>]
