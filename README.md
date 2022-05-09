@@ -17,11 +17,6 @@ To run the sample application:
 $ dotnet run
 ```
 
-| URL | Description |
-| --- | --- |
-| http://localhost:5000/weatherforecast | Weather Forecast Endpoint
-
-
 ## Deploying to Kubernetes as a TAP workload with Tanzu CLI
 
 > NOTE: The provided `config/workload.yaml` file uses the Git URL for this sample. When you want to modify the source, you must push the code to your own Git repository and then update the `spec.source.git` information in the `config/workload.yaml` file.
