@@ -24,8 +24,7 @@ type Startup(configuration: IConfiguration) =
     member _.Configure(app: IApplicationBuilder, env: IWebHostEnvironment) =
         if (env.IsDevelopment()) then
             app.UseDeveloperExceptionPage() |> ignore
-        app.UseHttpsRedirection()
-           .UseRouting()
+        app.UseRouting()
            .UseAuthorization()
            .UseEndpoints(fun endpoints ->
                 endpoints.MapControllers() |> ignore
